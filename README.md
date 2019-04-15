@@ -10,14 +10,14 @@
 #### 03 – Short on props and state
 - [x] Crash course in props and state
 #### 04 – The Home page - part 2
-- [ ] Using Fetch to get API data
-- [ ] HeroImage and the SearchBar with talk about Controlled Components
-- [ ] Finishing the Components for the Home Page
+- [x] Using Fetch to get API data
+- [x] HeroImage and the SearchBar with talk about Controlled Components
+- [x] Finishing the Components for the Home Page
 #### 05 – React Router
-- [ ] React Router, Links and short on Fragments
+- [x] React Router, Links and short on Fragments
 #### 06 – The Movie Page
-- [ ] Scaffolding out the components for the movie page
-- [ ] Fetching the API data for the Movie page
+- [x] Scaffolding out the components for the movie page
+- [x] Fetching the API data for the Movie page
 - [ ] Finishing the components for the Movie page - part 1
 - [ ] Finishing the components for the Movie page - part 2
 #### 07 – Type checking with PropTypes
