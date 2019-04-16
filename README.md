@@ -18,10 +18,10 @@
 #### 06 – The Movie Page
 - [x] Scaffolding out the components for the movie page
 - [x] Fetching the API data for the Movie page
-- [ ] Finishing the components for the Movie page - part 1
-- [ ] Finishing the components for the Movie page - part 2
+- [x] Finishing the components for the Movie page - part 1
+- [x] Finishing the components for the Movie page - part 2
 #### 07 – Type checking with PropTypes
-- [ ] Crash course in PropTypes
+- [x] Crash course in PropTypes
 #### 08 – Local Storage
 - [ ] Keeping state with Local Storage
 #### 09 – Production Build for deploy

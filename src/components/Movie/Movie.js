@@ -21,6 +21,7 @@ class Movie extends Component {
         // First fetch the movie...
         const endpoint =  `${API_URL}movie/${this.props.match.params.movieId}?api_key=${API_KEY}&language=en-US`;
         this.fetchItems(endpoint);
+        console.log(this.props.location.movieName)
     }
 
     fetchItems = (endpoint) => {
@@ -55,15 +56,26 @@ class Movie extends Component {
     render() {
         return (
             <div className="rmdb-movie">
-                <Navigation />
-                <MovieInfo 
-                    imageBG={this.state.movie ? `${IMAGE_BASE_URL}${BACKDROP_SIZE}${this.state.movie.backdrop_path}` : './images/no_image.jpg'}
-                    image={this.state.movie ? `${IMAGE_BASE_URL}${POSTER_SIZE}${this.state.movie.poster_path}` : './images/no_image.jpg'}
-                />
-                <MovieInfoBar />
-                {/* <FourColGrid /> */}
+                {this.state.movie ?
+                    <div>
+                        <Navigation movie={this.props.location.movieName} />
+                        <MovieInfo movie={this.state.movie} directors={this.state.directors} />
+                        <MovieInfoBar time={this.state.movie.runtime} budget={this.state.movie.budget} revenue={this.state.movie.revenue} />
+                    </div>
+                    : null
+                }
+                {this.state.actors ?
+                    <div className="rmdb-movie-grid">
+                        <FourColGrid header={'Actors'}>
+                            {this.state.actors.map((element, i) => {
+                                return <Actor key={i} actor={element} />
+                            })}
+                        </FourColGrid>
+                    </div>
+                    : null
+                }
+                {!this.state.actors && !this.state.loading ? <h1>No Movie Found!</h1> : null}
                 {this.state.loading ? <Spinner /> : null}
-
             </div>
         )
     }
