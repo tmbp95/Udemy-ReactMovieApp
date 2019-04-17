@@ -8,16 +8,17 @@ import NotFound from '../elements/NotFound/NotFound';
 const App = () => {
     return (
         <BrowserRouter>
+            {/* <BrowserRouter basename="react_rmdb/"> if the website is hosted in a subfolder*/}
             <React.Fragment>
                 <Header />
                 <Switch>
-                    <Route path="/" component={Home} exact />
-                    <Route path="/:movieId" component={Movie} exact />
+                    <Route path='/' component={Home} exact />
+                    <Route path='/:movieId' component={Movie} exact />
                     <Route component={NotFound} />
                 </Switch>
             </React.Fragment>
         </BrowserRouter>
-    )
-}
+    );
+};
 
 export default App;
